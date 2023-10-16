@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">72.72% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>8/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>5/8</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">72.72% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>8/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -92,13 +92,10 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -107,57 +104,63 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export default class Character {
-    constructor(name, type) {
-      this.name = name;
-      this.type = type;
-      this.health = 100;
-      this.level = 1;
-      const typeClass = [
-        'Bowman',
-        'Daemon',
-        'Magician',
-        'Swordsman',
-        'Undead',
-        'Zombie',
-      ];
+  constructor(name, type) {
+    const typeClass = [
+      'Bowman',
+      'Daemon',
+      'Magician',
+      'Swordsman',
+      'Undead',
+      'Zombie',
+    ];
 &nbsp;
-      if ((name.length &lt;= 2) || (name.length &gt;= 10)) {
-        throw new Error(
-          'Имя должно содержать min - 2 символа, max - 10',
-        );
-      }
-      if (typeof name !== 'string') {
-        throw new Error('Тип класса должен быть строкой');
-      }
-      if (!typeClass.includes(type)) {
-        throw new Error(
-          'Выберите один из доступных типов классов: Bowman, Daemon, Magician, Swordsman, Undead, Zombie',
-        );
-      }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ((name.length &lt;= 2) || (name.length &gt;= 10)) {
+<span class="cstat-no" title="statement not covered" >      throw new Error(</span>
+        'Имя должно содержать min - 2 символа, max - 10',
+      );
     }
-  }</pre></td></tr></table></pre>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof name !== 'string') {
+<span class="cstat-no" title="statement not covered" >      throw new Error('Тип класса должен быть строкой');</span>
+    }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!typeClass.includes(type)) {
+<span class="cstat-no" title="statement not covered" >      throw new Error(</span>
+        'Выберите один из доступных типов классов: Bowman, Daemon, Magician, Swordsman, Undead, Zombie',
+      );
+    }
+    this.name = name;
+    this.type = type;
+    this.health = 100;
+    this.level = 1;
+  }
+}
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-10-14T17:49:39.324Z
+                at 2023-10-16T17:47:57.854Z
             </div>
         <script src="prettify.js"></script>
         <script>
